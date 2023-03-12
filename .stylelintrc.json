@@ -1,0 +1,24 @@
+{
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-standard-scss",
+        "stylelint-config-recommended-scss"
+    ],
+    "plugins": ["stylelint-order", "stylelint-scss"],
+    "rules": {
+        "scss/at-if-no-null": null,
+        "color-no-invalid-hex": true
+    },
+    "order/properties-order": [
+        {
+            "groupName": "dimensions",
+            "emptyLineBefore": "always",
+            "properties": ["height", "width"]
+        },
+        {
+            "groupName": "font",
+            "emptyLineBefore": "always",
+            "properties": ["font-size", "font-weight"]
+        }
+    ]
+}
