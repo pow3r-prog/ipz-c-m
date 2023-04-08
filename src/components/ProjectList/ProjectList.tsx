@@ -9,9 +9,9 @@ import './ProjectList.scss'
 const ProjectList = (): React.ReactElement => {
     return (
         <div className='project__list'>
-            {mockedData.map((project): any => (
-                <span>
-                    <div className='project__list_item' key={project.id}>
+            {mockedData.map(project => (
+                <span key={project.id}>
+                    <div className='project__list_item'>
                         <ProjectCard data={project} />
                     </div>
                     <ProjectForm />
