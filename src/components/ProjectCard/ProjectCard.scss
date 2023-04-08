@@ -1,0 +1,35 @@
+@import 'styles/variables';
+
+.name {
+    color: $color-dark-grey;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.desc {
+    margin: 0;
+    text-align: center;
+}
+
+.image {
+    width: auto;
+    height: 150px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 30px;
+    border: none;
+    background: $color-light-blue;
+    color: $color-white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+        background: $color-dark-blue;
+    }
+}

@@ -1,0 +1,76 @@
+@import 'styles/variables';
+
+.form {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 5px;
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    background: $color-grey;
+    border-radius: 15px;
+
+    input,
+    textarea {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+            sans-serif;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    label {
+        color: $color-dark-grey;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+
+    input {
+        width: 80%;
+        height: 30px;
+        padding-left: 5px;
+        color: $color-dark-grey;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    .checkbox {
+        width: 15px;
+    }
+
+    .buttons__group {
+        width: 100%;
+
+        button {
+            width: 100px;
+            height: 30px;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .save {
+            margin-right: 10px;
+            background: $color-white-green;
+            color: $color-white;
+
+            &:hover {
+                background-color: $color-dark-green;
+            }
+        }
+
+        .cancel {
+            background: $color-red;
+            color: $color-white;
+
+            &:hover {
+                background-color: $color-dark-red;
+            }
+        }
+    }
+}
