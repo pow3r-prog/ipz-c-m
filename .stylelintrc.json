@@ -9,7 +9,8 @@
         "scss/at-if-no-null": null,
         "color-no-invalid-hex": true,
         "scss/at-import-partial-extension": "never",
-        "selector-class-pattern": null
+        "selector-class-pattern": null,
+        "declaration-block-no-redundant-longhand-properties": null
     },
     "order/properties-order": [
         {
