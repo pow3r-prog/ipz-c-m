@@ -1,39 +1,33 @@
 import React from 'react'
 
+import { TMockedData } from 'types/mockedDataTypes'
+
 import './ProjectCard.scss'
 
-export interface IMockedData {
-    id: number
-    name: string
-    description: string
-    imageUrl: string
-    contractTypeId: number
-    contractSignedOn: string
-    budget: number
-    isActive: boolean
-}
-
 interface IData {
-    data: IMockedData
+    project: TMockedData
+    onEdit: (edit: TMockedData) => void
 }
 
 const ProjectCard = (data: IData): React.ReactElement => {
-    const project: IData = data
-    const handleEditClick = (projectBeingEdited: IMockedData) => {
-        console.log(projectBeingEdited)
+    const { project, onEdit } = data
+
+    const handleEditClick = (projectBeingEdited: TMockedData) => {
+        onEdit(projectBeingEdited)
     }
+
     return (
         <>
-            <div className='name'>{project.data.name}</div>
-            <p className='desc'>{project.data.description}</p>
-            <img className='image' src={project.data.imageUrl} alt='bmwTop' />
-            <div>{project.data.contractTypeId}</div>
-            <div>{project.data.contractSignedOn}</div>
-            <div>Budget : {project.data.budget}</div>
-            <div>{project.data.isActive}</div>
+            <div className='name'>{project.name}</div>
+            <p className='desc'>{project.description}</p>
+            <img className='image' src={project.imageUrl} alt='bmwTop' />
+            <div>{project.contractTypeId}</div>
+            <div>{project.contractSignedOn}</div>
+            <div>Budget : {project.budget}</div>
+            <div>{project.isActive}</div>
             <button
                 onClick={() => {
-                    handleEditClick(project.data)
+                    handleEditClick(project)
                 }}
                 className='btn'
             >
