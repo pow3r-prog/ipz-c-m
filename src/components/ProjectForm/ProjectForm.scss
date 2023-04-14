@@ -12,6 +12,10 @@
     background: $color-grey;
     border-radius: 15px;
 
+    .error {
+        color: $color-red;
+    }
+
     input,
     textarea {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
