@@ -84,9 +84,7 @@ const projectAPI = {
             .then(parseJSON)
             .catch((error: TypeError) => {
                 console.log('log client error ' + error)
-                throw new Error(
-                    'There was an error updating the project. Please try again.',
-                )
+                throw new Error('Error, run server!')
             })
     },
 }
